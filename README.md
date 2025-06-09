@@ -1,8 +1,14 @@
 # Date Calculator App 📅
 
 A beautiful, real-time JavaScript application that calculates and displays the elapsed time from today to two specific target dates:
-- **February 14th, 2025** 
+- **February 14th, 2025** (Valentine's Day) 💝
 - **March 14th, 2025** 🌸
+
+## 🌐 Live Demo
+**Try it live**: [https://saralkarki.github.io/date-calculator-app/](https://saralkarki.github.io/date-calculator-app/)
+
+## 📦 Repository
+**GitHub**: [https://github.com/Saralkarki/date-calculator-app](https://github.com/Saralkarki/date-calculator-app)
 
 ## Features
 
