@@ -1,0 +1,48 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  # Removed pull_request trigger for security (prevents malicious fork PRs)
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Prevent concurrent deployments
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Security: Shallow clone - don't fetch full git history
+          fetch-depth: 1
+          # Security: Don't persist git credentials
+          persist-credentials: false
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire directory (for static sites this is usually fine)
+          path: '.'
+          # For better security, you could specify exact files:
+          # path: |
+          #   index.html
+          #   src/
+          #   package.json
+          #   README.md
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
