@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Calculator - Days Until</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .date-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .date-title {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .time-unit {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .time-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            display: block;
+        }
+
+        .time-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .current-time {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .status {
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .upcoming {
+            background: rgba(52, 152, 219, 0.3);
+            color: #3498db;
+            border: 1px solid rgba(52, 152, 219, 0.5);
+        }
+
+        .passed {
+            background: rgba(231, 76, 60, 0.3);
+            color: #e74c3c;
+            border: 1px solid rgba(231, 76, 60, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📅 Date Calculator</h1>
+        <div class="current-time" id="currentTime"></div>
+        
+        <div class="date-card">
+            <div class="date-title">💝 February 14th, 2025</div>
+            <div class="status" id="status1"></div>
+            <div class="countdown" id="countdown1">
+                <div class="time-unit">
+                    <span class="time-value" id="days1">0</span>
+                    <div class="time-label">Days</div>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="hours1">0</span>
+                    <div class="time-label">Hours</div>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="minutes1">0</span>
+                    <div class="time-label">Minutes</div>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="seconds1">0</span>
+                    <div class="time-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="date-card">
+            <div class="date-title">🌸 March 14th, 2025</div>
+            <div class="status" id="status2"></div>
+            <div class="countdown" id="countdown2">
+                <div class="time-unit">
+                    <span class="time-value" id="days2">0</span>
+                    <div class="time-label">Days</div>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="hours2">0</span>
+                    <div class="time-label">Minutes</div>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="minutes2">0</span>
+                    <div class="time-label">Minutes</div>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="seconds2">0</span>
+                    <div class="time-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/app.js"></script>
+</body>
+</html>

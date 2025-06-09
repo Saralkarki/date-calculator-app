@@ -1,0 +1,23 @@
+{
+  "name": "date-calculator-app",
+  "version": "1.0.0",
+  "description": "A simple JavaScript app that calculates elapsed time from today to specific target dates",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "open index.html",
+    "serve": "python3 -m http.server 8080",
+    "serve-node": "npx http-server -p 8080 -o"
+  },
+  "keywords": [
+    "javascript",
+    "date",
+    "calculator",
+    "countdown",
+    "timer"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
